@@ -19,16 +19,20 @@
         <li> <a href=#> Final Project </a></li>
     </ul>
     <h1> Calculator </h1>
-    
-    <input type="text" name="input1" style="float:left; margin-top: 40px"><br>
-    <select style="text-align: center; margin-left: 30px">
+    <input type="text" id="input1" style="float:left; margin-top: 40px"><br>
+    <select style="text-align: center; margin-left: 30px" id="operation">
         <option value="+">Added to</option>
         <option value="-">Decreased by</option>
         <option value="/">Divided by</option>
-        <option value="x">Multiplied by</option>
+        <option value="*">Multiplied by</option>
+        <option value="%">When divided by the following number, will have the remainder</option>
+        <option value="==">Is equal to</option>
     </select>
-    <input type="text" name="input2" style="margin-left: 60px; margin-top: 20px"><br>
-     <button style="float:right; margin-top: -25px; margin-right: 550px" id="calculatorbutton"> Let's Do Some Math!!!! </button>
-    <script src=#></script>
+    <input type="text" id="input2" style="margin-left: 10px; margin-top: 20px"><br>
+     <button style="float:right; margin-top: -25px; margin-right: 250px" id="calculatorbutton"> Let's Do Some Math!!!! </button>
+    <script src="calculator.js"></script>
+    <div id="answer">
+    Answer
+    </div>
     
 </body>
