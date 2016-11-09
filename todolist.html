@@ -15,13 +15,14 @@
         <li> <a href="calculator.html"> Calculator </a></li>
          <li> <a href="changer.html"> Colour Changer </a></li>
         <li> <a href="todolist.html"> To do List </a></li>
+        <li> <a href="howto.html"> How To 2</a></li>
         <li> <a href=#> Vindinium </a></li>
         <li> <a href=#> Final Project </a></li>
     </ul>
     <h1> To Do List </h1>
     <div style="text-align: center">
+        <h1>Add Events To My Schedule</h1>
     <input type="text" id="input" style="margin-top: 30px"><br>
-    
     <select  id="select" >
         <option value="monday" >Monday</option>
         <option value="tuesday" >Tuesday</option>
@@ -32,7 +33,11 @@
     
    
       <button id="button" style="margin-top: 30px"> Let's Add It To The List </button>
-   
+      </div>
+      
+      
+      <div style="text-align: center" id="all">
+   <h1> My Current Shedule </h1>
     <h2>Things I Must Do By Monday</h2>
     <div id="mondaydiv"> 
     </div>
@@ -54,5 +59,21 @@
     </div>
     
      </div>
+
+     <div style="text-align: center"> 
+     <h1> What Day Is It Currently? </h1>
+     <select id="selectday">
+         <option value="monday">Monday</option>
+         <option value="tuesday">Tuesday</option>
+         <option value="wednesday">Wednesday</option>
+         <option value="thursday">Thursday</option>
+         <option value="friday">Friday</option>
+     </select>
+     <button id="checkoff"> Update The Schedule </button> 
+     </div>
+     <div>
+         <h2>  </h2>
+     </div>
+     
     <script src="todolist.js"></script>
     
