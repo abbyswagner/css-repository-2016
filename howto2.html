@@ -1,8 +1,7 @@
 <!doctype html>
 <html>
-
-<head>
-    <title> How To </title>
+    <head>
+    <title> How To (Javascript Edition)</title>
     <link rel="stylesheet" href="mainstyle.css" type="text/css" />
     <style>
     </style>
@@ -13,11 +12,116 @@
 <ul id="navbar">
         <li> <a href="About-Me-Page.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
-        <li> <a href="how to"> How To </a></li>
+        <li> <a href="how-to.html"> How To </a></li>
         <li> <a href="calculator.html"> Calculator </a></li>
          <li> <a href="changer.html"> Colour Changer </a></li>
         <li> <a href="todolist.html"> To do List </a></li>
-        <li> <a href="howto.html"> How To 2</a></li>
+        <li> <a href="howto2.html"> How To 2</a></li>
         <li> <a href=#> Vindinium </a></li>
         <li> <a href=#> Final Project </a></li>
     </ul>
+    
+    <h1> How To Use Javascript</h1>
+    <h2 style="text-align: center"> What Is Javascript and What Can You Create With It? </h2>
+    <p>Javascript, not to be confused with Java, is a computer programming language. Unlike html, with Javascript you can make the website interactive. 
+    Javascript can read user inputed data and make calculations and/or actions. With this language, I made a calculator and a todo list. Read on to see 
+    how I used different Javascript elements.</p>
+    
+    <h2> Defining Variables </h2>
+    
+    <div style="display: inline-block; width: 50%; float: left">
+    <p> In Javascript, it becomes necessary to define variables in order to use them in the code. Additionally, you must connect the javascript variables to the html variables. 
+    While naming variables, you can do such by using the DOM element, or document.getElementById. In the provided code to the right, I create four different variables.
+    Think of it like an equation. First, you list the new variable with the var element (for example var "firstNumber"). Next, equals the document.getElementById element. Lastly, put
+    the id of what you want to link to the javascript page in quotations and parentheses. Also, do not forget the semicolons because this is how you list different elements in javascript.
+    Also note the variables are any values you need for your function to work. In the example to the right, I define the variables I'll need for my calculator to work. I named the div carrying 
+    the user-inputed first number, second number, and operation as you need these two things to figure out the what the user wants the calculator to do in the function. I also defined the div
+    carrying the answer because once the calculator finds the answer, it will have to display it in said div.
+    </p>
+    </div>
+
+<div style="display: inline-block; width: 50%;  float: right">
+    <p> My Javascript Page Code: </p>
+    <pre>
+        <code>
+var firstNumber = document.getElementById(&quot;input1&quot;);
+var operation = document.getElementById(&quot;operation&quot;);
+var secondNumber = document.getElementById(&quot;input2&quot;);
+var calculatorbutton = document.getElementById(&quot;calculatorbutton&quot;);
+        </code>
+    </pre>
+</div>
+
+<div style="clear: both"></div>
+
+<div style="display: inline-block; width: 50%; float: left">
+    <h2> Setting Up A Function </h2>
+    <p>Setting up your code to perform a function is simple. Just use the function tag and name it. For example, in the code for my calculator, I named it "calculate". Then, add a set of 
+    parentheses and a set of brackets. Within the brackets will be the code telling the computer what you as the coder want it to do. Another thing you'll want to do 
+    is redefine the variables with a .value tag. This essentially tells the computer to "read" and make sense of the data rather than just recognizing its existence.</p>
+</div>
+
+<div style="display: inline-block; width: 50%; float: left">
+    <pre>
+        <code>
+    function calculate() {
+    var num1 = firstNumber.value;
+    var num2 = secondNumber.value;
+    var answer = document.getElementById(&quot;answer&quot;);
+        </code>
+    </pre>
+
+</div>
+
+<div style="display: inline-block; width: 50%; float: right">
+    <h2> If Statements </h2>
+    <p> One of the most useful things you can add to your function is an if statement. An if statement basically a way to make the computer do something given the right conditions. For example,
+    if you wanted the background of your website to turn pink when the user entered the word "pink", you could use an if statement, the condition being the inputed string (set of characters) "pink" and
+    the event would be the colour change. If statements start with an "if", the condition you want your operation to happen in in parentheses, and a set of curly brackets. Within those curly brackets is what you want
+    your computer to do. This being said, you can also place an if statement within an if statement when you want an event to occur given two conditions, like the example to the right. In this example I say if the user
+    inputed a plus sign in one of the drop downs in my calculator, the following if statements will come into play. The first of these if statements is if the user inputed numbers are "2" and "2", the answer (note it is "innerHTML"
+    so that the computer displays the actual value) will be the string "fish". One small thing to note is some characters have special meanings ("&&" is "and" and "===" is "equals") and you put quotations around strings (which as
+    mentioned before are lines of characters that are not numbers to be calculated). </p>
+    <p> Another thing about if statements is the first statement begins with "if" and all following  statements start with "else if" with the exception being "else" statements who are without a specific characteristic, whose condition is just that it
+    does not fall under any other categories. Else if statements are done the same way with "if" being replaced by "else if". Else statements, however, just have "else" and the proceeding curly brackets which just have 
+    what you want the computer to do. In my example, I use an else if statement to say when the user inputs "1234567890" for both numbers while using addition, the computer will display "I'm too lazy". Next, my else statement says when the user inputted values are not
+    "2" nor "1234567890" in addition, it will add normally.</p>
+</div>
+
+<div style="display: inline-block; width: 50%; float: left">
+    <pre>
+        <code>
+            if (operation.value === &quot;+&quot;) {
+        if (num1 == &quot;2&quot; &amp;&amp; num2 == &quot;2&quot;) {
+        answer.innerHTML = &quot;Fish&quot;
+        }
+        </code>
+    </pre>
+        <pre>
+        <code>
+            else if (num1 == &quot;1234567890&quot; &amp;&amp; num2 == &quot;1234567890&quot;) {
+        answer.innerHTML = &quot;I'm too lazy&quot;;
+        }
+        
+        else {
+        answer.innerHTML = Number(num1) + Number(num2);
+        }
+    }
+        </code>
+    </pre>
+</div>
+
+
+<div style="display: inline-block; width: 50%; float: left; margin-top: 30px">
+    <h2> Getting Your Operation To Work</h2>
+    <p>You're almost ready to have a working function; this is the simplest part! To make your function work, just have the id of the button with ".addEventListener" and, within parentheses, "click" and the name of your function. You basically tell the computer when the button is clicked, to run the function.</p>
+</div>
+<div style="display: inline-block; width: 50%; float: right"> 
+<pre>
+    <code>
+        calculatorbutton.addEventListener(&quot;click&quot;, calculate);
+    </code>
+</pre>
+</div>
+</body>
+</html>
